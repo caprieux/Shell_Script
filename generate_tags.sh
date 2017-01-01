@@ -48,7 +48,7 @@ function generate_src_lists {
 	echo "Done"
 }
 
-function generate_ctags {
+function generate_tags {
 	LIST_FILE=$2"/"$1".list"
 	TAGS_FILE=$2"/"$1".tags"
 	if [ ! -s $LIST_FILE ];then
@@ -79,7 +79,6 @@ echo "You are generating \"$NAME\" tags info. in \"$FOLDER_NAME\"."
 
 clean_tags $FOLDER_NAME
 generate_src_lists $NAME $FOLDER_NAME
-generate_ctags $NAME $FOLDER_NAME
+generate_tags $NAME $FOLDER_NAME
 ls $FOLDER_NAME
-generate_cscope
 
